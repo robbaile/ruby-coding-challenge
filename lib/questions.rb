@@ -51,12 +51,15 @@ end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+    symbol.to_s
 end
 
 
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+    #split the email on @ and take the second part and then split that on the . and take the first part
+    email.split("@")[1].split(".")[0]
 end
 
 # capitalize the first letter in each word of a string,
@@ -93,6 +96,7 @@ end
 # don't reverse the array, but reverse every word inside it. e.g.
 # ['dog', 'monkey'] becomes ['god', 'yeknom']
 def reverse_every_element_in_array(array)
+    array.map()
 end
 
 # discard the first 3 elements of an array,
@@ -102,14 +106,17 @@ end
 
 # add an element to the beginning of an array
 def add_element_to_beginning_of_array(array, element)
+    array.unshift(element)
 end
 
 # return the shortest word in an array
 def shortest_word_in_array(array)
+    array.min_by(&:length)
 end
 
 # return the shortest word in an array
 def longest_word_in_array(array)
+    array.max_by(&:length)
 end
 
 # add up all the numbers in an array, so [1, 3, 5, 6]
