@@ -1,5 +1,5 @@
 require 'rspec'
-require 'questions'
+require '../lib/questions'
 
 describe 'learning numbers :' do
 
