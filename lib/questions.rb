@@ -189,6 +189,9 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+    File.open(file_path).each do |line|
+        return line.split(" ").length
+    end
 end
 
 
